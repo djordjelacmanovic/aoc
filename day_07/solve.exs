@@ -60,5 +60,4 @@ defmodule Solver do
 end
 
 IO.puts("First part: #{Solver.part1()}")
-
-Solver.part2() |> IO.inspect()
+IO.puts("Second part: #{Solver.part2()}")
