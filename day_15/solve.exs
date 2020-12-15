@@ -8,10 +8,7 @@ defmodule Solution do
   end
 
   defp solve(max_t) do
-    input =
-      "15,5,1,4,7,0"
-      |> String.split(",", trim: true)
-      |> Enum.map(&String.to_integer/1)
+    input = [15, 5, 1, 4, 7, 0]
 
     input
     |> Enum.with_index(1)
