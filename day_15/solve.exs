@@ -20,10 +20,6 @@ defmodule Solution do
   defp iter(_memo, turn, prev, max_turn) when max_turn == turn, do: prev
 
   defp iter(memo, turn, prev, max_turn) do
-    IO.write(
-      "\rTurn #{turn}/#{max_turn - 1} (#{(turn / (max_turn - 1) * 100) |> Float.round(2)}%)"
-    )
-
     case Map.get(memo, prev) do
       nil ->
         iter(memo |> Map.put(prev, turn - 1), turn + 1, 0, max_turn)
