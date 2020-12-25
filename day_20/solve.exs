@@ -5,7 +5,6 @@ defmodule Solution do
     |> Enum.filter(fn {_, ids} -> length(ids) == 1 end)
     |> Enum.group_by(fn {_, [id]} -> id end)
     |> Enum.filter(fn {_id, es} -> length(es) == 4 end)
-    |> IO.inspect(label: "corner tiles")
     |> Enum.reduce(1, fn {id, _}, acc -> acc * id end)
   end
 
@@ -60,4 +59,4 @@ defmodule Solution do
        tile |> Enum.map(&String.graphemes/1)}
 end
 
-Solution.part1() |> IO.inspect()
+IO.puts("First part: #{Solution.part1()}")
